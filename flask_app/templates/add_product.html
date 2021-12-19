@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='script.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>The Shop</title>
+</head>
+<style>
+    body {
+        background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+</style>
+<body> 
+    <header>
+        <nav class="nav justify-content-end navbar bg-info container">
+           <a href="/products" class="btn btn-primary">Dashboard</a> 
+
+            <a href="/logout" class="btn btn-success ml-3" >Logout</a>
+        </nav>
+    </header>
+    <div class="text-center text-danger">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for m in messages %}
+                    <h5>{{ m }}</h5>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <h3 class="text-center container">Add a Product</h3>
+    <div>
+        <form action="/products/create", method="POST" class="p-3 mb-2 bg-info text-white w-25 p-3 container">
+            <p><label for="name">Product Name: </label> 
+            <input class="form-control" name="name" type="text" placeholder="minimum 1 characters"></p>
+            <p><label for="Price">Price: </label>
+            <input class="form-control" name="price" type="text" placeholder="Price" value="0"></p>
+            <p>Description:</p>
+            <textarea  class="form-control" name="description" id="description" cols="5" rows="5" placeholder="Add a description"></textarea>
+            <span id="passwordHelpInline">
+            <button class="btn-success form-control" type="submit" >Create</button>
+            </form>
+    </div>
+    <footer class="bg-info container p-2 navbar fixed-bottom">
+        <p class="text-center font-weight-bold">The Shop Corporation &copy;</p>
+        <div class="row">
+            <div class="text-left p-1">
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="Sign-up" placeholder="Let's stay connected !">
+                    <div class="input-group-append">
+                        <button class="btn-success form-control">Sign up !</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right p-1">
+                <a href="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k" /> </a>
+                <a href="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k" /> </a>
+                <a href="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k" /> </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

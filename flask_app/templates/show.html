@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='script.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>The Shop</title>
+</head>
+<style>
+    body {
+        background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+</style>
+<body>
+    <header>
+        
+        <nav class="navbar nav justify-content-end navbar bg-info container" >
+            <a href="/products"type="button" class="btn btn-primary">Dashboard</a>
+            <a href="/products/new" type="nav-link" class="btn btn-primary ml-3">Create a Product</a>
+            <a href="/logout" type="nav-link" class="btn btn-primary ml-3"> Logout</a>
+        </nav>
+    </header>
+    <br>
+    <main class=" bg-info opacity-50 w-25 p-3 text-white d-flex container">
+        <div>
+            <p class="text-left font-weight-bold">Product Name : {{products.name}}</p>
+            <p class="text-left font-weight-bold">Sold By: {{products.creator.first_name}} {{products.creator.last_name}}</p>
+            <p class="text-left font-weight-bold">price: ${{products.price}}</p>
+            <p class="text-left font-weight-bold">Description: {{products.description}}</p>
+            <a href="/products/{{products.id}}/edit"><button  class="btn btn-warning" type="button"> Edit</button></a>
+        </div>
+    </main>
+    <footer class="bg-info container p-3 navbar fixed-bottom">
+        <p class="text-center font-weight-bold">The Shop Corporation &copy;</p>
+        <div class="row">
+            <div class="text-left p-1">
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="Sign-up" placeholder="Let's stay connected !">
+                    <div class="input-group-append">
+                        <button class="btn-success form-control">Sign up !</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right p-1">
+                <a href="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k" /> </a>
+                <a href="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k" /> </a>
+                <a href="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k" /> </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

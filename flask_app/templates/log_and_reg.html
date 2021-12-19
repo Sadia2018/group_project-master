@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login and Registration</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='script.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background-image: url(../static/images/photo-1472851294608-062f824d29cc.jfif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+</style>
+<body>
+    <p>
+        <h1 class="text-center font-weight-bold"> Welcome to The Shop !</h1>
+        <br>
+        <div class="text-center text-danger">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for m in messages %}
+                        <h5>{{ m }}</h5>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </p>
+    <div>
+        <form action="/users/register" method="POST" class="p-3 mb-2 bg-info text-white w-25 p-3 container">
+            <h2>New Customer ? Register.</h2>
+            <section>
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" class="form-control">
+            </section>
+            <section>
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" class="form-control">
+            </section>
+            <section>
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="form-control">
+            </section>
+            <section>
+                <label for="password">Password:</label>
+                <input type="password" name="password" class="form-control">
+            </section>
+            <section>
+                <label for="confirm">Confirm Password:</label>
+                <input type="password" name="confirm" class="form-control">
+            </section>
+            <section>
+                <button class="btn btn-success form-control">Register</button>
+            </section>
+        </form>
+    </div>
+    <div>
+        <form action="/users/login" method="POST" class="p-3 mb-2 bg-info text-white w-25 p-3 container">
+            <h2>Already a customer ? Login.</h2>
+            <section>
+                <label for="email">Email:</label>
+                <input type="email" name="email"class="form-control">
+            </section>
+            <section>
+                <label for="password">Password:</label>
+                <input type="password" name="password"class="form-control">
+            </section>
+            <section>
+                <button class="btn btn-success form-control">Login</button>
+            </section>
+        </form>
+    </div>
+</body>
+</html>
