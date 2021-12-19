@@ -36,9 +36,9 @@
     <div>
         <form action="/products/create", method="POST" class="p-3 mb-2 bg-info text-white w-25 p-3 container">
             <p><label for="name">Product Name: </label> 
-            <input class="form-control" name="name" type="text" placeholder="minimum 1 characters"></p>
+            <input class="form-control" name="name" type="text" placeholder="Please enter a product name"></p>
             <p><label for="Price">Price: </label>
-            <input class="form-control" name="price" type="text" placeholder="Price" value="0"></p>
+            <input class="form-control" name="price" type="currency" placeholder="$"></p>
             <p>Description:</p>
             <textarea  class="form-control" name="description" id="description" cols="5" rows="5" placeholder="Add a description"></textarea>
             <span id="passwordHelpInline">
