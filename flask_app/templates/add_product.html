@@ -17,7 +17,7 @@
 </style>
 <body> 
     <header>
-        <nav class="nav justify-content-end navbar bg-info container">
+        <nav class="nav justify-content-end navbar bg-info container-fluid">
            <a href="/products" class="btn btn-primary">Dashboard</a> 
 
             <a href="/logout" class="btn btn-success ml-3" >Logout</a>
@@ -32,7 +32,7 @@
             {% endif %}
         {% endwith %}
     </div>
-    <h3 class="text-center container">Add a Product</h3>
+    <h3 class="text-center container text-light">Add a Product</h3>
     <div>
         <form action="/products/create", method="POST" class="p-3 mb-2 bg-info text-white w-25 p-3 container">
             <p><label for="name">Product Name: </label> 
@@ -45,7 +45,7 @@
             <button class="btn-success form-control" type="submit" >Create</button>
             </form>
     </div>
-    <footer class="bg-info container p-2 navbar fixed-bottom">
+    <footer class="bg-info container-fluid p-2 navbar fixed-bottom">
         <p class="text-center font-weight-bold">The Shop Corporation &copy;</p>
         <div class="row">
             <div class="text-left p-1">
