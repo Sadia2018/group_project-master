@@ -1,7 +1,11 @@
 {
     "_meta": {
         "hash": {
+<<<<<<< HEAD
             "sha256": "56a193389af4e80419389b776c70f29c2e44b68648272be6a081d7f774253c7c"
+=======
+            "sha256": "be75d377b7923c47215dc28c913b7c06844c84a6d5c4f2b9b8c14de5187855dd"
+>>>>>>> 47eeff7 (heroku commit)
         },
         "pipfile-spec": 6,
         "requires": {
@@ -108,12 +112,22 @@
             "index": "pypi",
             "version": "==2.0.2"
         },
+<<<<<<< HEAD
         "flask-bcrypt": {
             "hashes": [
                 "sha256:d71c8585b2ee1c62024392ebdbc447438564e2c8c02b4e57b56a4cafd8d13c5f"
             ],
             "index": "pypi",
             "version": "==0.7.1"
+=======
+        "gunicorn": {
+            "hashes": [
+                "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e",
+                "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"
+            ],
+            "index": "pypi",
+            "version": "==20.1.0"
+>>>>>>> 47eeff7 (heroku commit)
         },
         "itsdangerous": {
             "hashes": [

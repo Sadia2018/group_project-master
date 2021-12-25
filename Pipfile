@@ -5,8 +5,13 @@ name = "pypi"
 
 [packages]
 flask = "*"
+<<<<<<< HEAD
 pymysql = "*"
 flask-bcrypt = "*"
+=======
+bcrypt = "*"
+gunicorn = "*"
+>>>>>>> 47eeff7 (heroku commit)
 
 [dev-packages]
 
